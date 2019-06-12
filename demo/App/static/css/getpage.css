@@ -1,0 +1,10 @@
+body{
+    background:gray;
+}
+
+div{
+    width:1000px;
+    height:2000px;
+    background:white;
+    margin:auto;
+}

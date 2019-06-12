@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--block(kuai)jie gou biao qian ,juyou qiang zhi xing-->
+    <!--php-->
+    {% block ext_css%}
+        <!--css bixu xie zai li mian-->
+
+
+    {%endblock%}
+</head>
+<body>
+
+    {% block  header %}
+        <h2>chi wo yi ji</h2>
+    {% endblock %}
+
+    <!--wang zhan he xin nei rong -->
+    {% block content %}
+    {% endblock %}
+
+    <!--wangzhan ye jiao-->
+    {% block bottom %}
+    {% endblock  %}
+
+    <!--zheli xie js-->
+    {% block ext_js %}
+    {% endblock %}
+</body>
+</html>

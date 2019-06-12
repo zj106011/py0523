@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/getpage.css"/>
+</head>
+<body>
+<div>
+    <table style="width:1000px">
+            <tr>
+                {% for k,v in users[0].__dict__.items() %}
+                    {% if k!='_sa_instance_state' %}
+                        <th>{{k}}</th>
+                    {% endif %}
+                {%endfor%}
+            </tr>
+        {% for p in users%}
+            <tr>
+                {% for k,v in p.__dict__.items() %}
+                    {% if k!='_sa_instance_state' %}
+                        <td style="border:1px solid black" >{{v}}</td>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+        {% endfor %}
+</table>
+    <a href="{{url_for('blueprint.getpage')}}?page={{page-1}}">shangyiye</a>
+    <a href="{{url_for('blueprint.getpage')}}?page={{page+1}}">xiayiye</a>
+</div>
+</body>
+</html>
